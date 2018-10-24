@@ -9,6 +9,7 @@ L'intérêt est de pouvoir recréer la structure de la base à tout moment.
 - phpmyadmin : pizzastore / Exporter / personnalisée / décocher Données
 
 ## Au niveau du PHP, on va créer quelques fichiers / dossier :
+- config/config.php -> Stocke toutes les variables globales
 - config/database.php -> Connexion à la base de données en PDO, sera inclus dans tous les fichiers PHP
 - partials/header.php -> Le header du site à inclure dans toutes les pages (Bootstrap CDN)
 - partials/footer.php -> Le footer du site à inclure dans toutes les pages
