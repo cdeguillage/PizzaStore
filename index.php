@@ -1,74 +1,49 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
 
+    <title>Pizza Store</title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="assets/css/starter-template.css" rel="stylesheet">
+  </head>
 
+  <body>
 
-<?php
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Pizza Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-pizzastore">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-// On crée une connexion à une BDD
-// $db = new PDO('mysql:host=localhost;port=3306;dbname=pizzastore;charset=utf8'; 'root', '');
-try
-{
-    $db = new PDO('mysql:host=localhost;port=3306;dbname=pizzastore', 'root', '',
-                [
-                // Activation de la gestion des messages d'erreur xdebug
-                 PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING,
-                // Charset
-                 PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
-                // Choix des clés retournés dans les tableaux FETCH et FETCHALL
-                // PDO::FETCH_NUM ou PDO::FETCH_ASSOC
-                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                ]
-    );
-}
-catch( Exception $e)
-{
-    echo $e->getMessage();
-    header('Location: https://www.google.fr/search?q='.$e->getMessage());
-}
-// ******************************************************************************
-// FORMULAIRE - Choix pizza
+      <div class="collapse navbar-collapse" id="navbar-pizzastore">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Liste des pizzas</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
+    <main class="container">
+        <h1>Mon site Pizza Store</h1>
+    </main><!-- /.container -->
 
-
-// ******************************************************************************
-if (!empty($_GET['id']))
-{
-    // intval() - Contre les injections SQL uniquement pour les numériques
-    $id_pizza = intval($_GET['id']);
-    if (is_numeric($id_pizza))
-    {        
-        //$query = $db->query('SELECT * FROM pizza WHERE id='.$id_pizza));
-        $query = $db->prepare('SELECT * FROM pizza WHERE id=:id_pizza');
-        // $query->bindParam(':id_pizza', $id_pizza);
-        // $id_pizza = $_GET['id'];
-        $query->bindValue(':id_pizza', $id_pizza, PDO::PARAM_STR);
-        $query->execute();
-
-        $pizza = $query->fetch();
-        // Pizza identifié (ou pas) !
-        if ($pizza != false)
-        {
-            echo '<h1>'.$pizza['name'].'</h1><br />';
-        }
-        else   // Pizza inexistante
-        {
-            echo '<h1>Pizza inconnu - ERREUR 404 #3 - Identifiant non trouvé en base ;-(</h1>';
-        }
-    }
-    else
-    {
-        // Sortie de la page en cas d'anomalie
-        echo '<h1>Pizza inconnu - ERREUR 404 #2 - Identifiant non numérique ;-(</h1>';
-    }
-}
-else
-{
-    // Sortie de la page en cas d'anomalie
-    echo '<h1>Pizza inconnu - ERREUR 404 #1 - Identifiant non déterminé  ;-(</h1>';
-}
-
-
-
-
-?>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
