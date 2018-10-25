@@ -23,5 +23,3 @@
 
         die();  // ON TAPE SUR LE BOUTON ROUGE D'URGENCE !!!
     }
-    
-    if (($__DEBUG__) and isset($db)) var_dump($db);

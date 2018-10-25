@@ -1,4 +1,6 @@
 <?php
+  // Inclusion du fichier functions
+  require_once(__DIR__.'/../config/functions.php');
   // Fichier de configuration globale
   require_once(__DIR__.'/../config/config.php');
   // Connection à la base de données
@@ -8,6 +10,10 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|BenchNine" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -36,7 +42,7 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top">
       <a class="navbar-brand" href="index.php"><?=$siteName;?></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-pizzastore">
         <span class="navbar-toggler-icon"></span>
