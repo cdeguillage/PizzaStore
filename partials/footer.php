@@ -5,6 +5,6 @@
     <script src="assets/js/vendor/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- JS -->
-    <script src="assets/js/sript.js"></script>
+    <!-- <script src="assets/js/script.js"></script> -->
   </body>
 </html>

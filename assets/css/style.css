@@ -18,6 +18,30 @@ body {
     text-shadow: 2px 2px #000000;
 }
 
+.page-title-adm {
+    font-family: 'Alfa Slab One', cursive;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 2px solid #e8e8e8;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0 50% 0 0;
+    text-shadow: 2px 2px #000000;
+}
+
+.page-stitle {
+    font-family: 'Alfa Slab One', cursive;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 2px solid #e8e8e8;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #dc3545;
+    text-shadow: 2px 2px #000000;
+}
+
 .font-h3 {
     font-family: 'Homemade Apple', cursive;
     font-size: 1.5rem;
@@ -90,3 +114,7 @@ img {
     color: #FFFFFF;
 }
 */
+
+textarea[name=description] {
+   resize: none;
+}

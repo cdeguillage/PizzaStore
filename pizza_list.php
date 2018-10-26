@@ -2,6 +2,9 @@
     // Title
     $currentPageTitle = 'Nos pizzas';
 
+    // Utilisateur
+    $admin = false;
+
     // Header du site web
     require_once(__DIR__.'/partials/header.php');
 

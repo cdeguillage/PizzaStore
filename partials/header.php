@@ -38,11 +38,15 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/starter-template.css" rel="stylesheet">
+
+    <!-- JS LOAD -->
+    <script src="assets/js/script_load.js"></script>
+
   </head>
 
   <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark <?php echo $admin === false ? 'bg-danger ' : 'bg-success '; ?>fixed-top">
       <a class="navbar-brand" href="index.php"><?=$siteName;?></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-pizzastore">
         <span class="navbar-toggler-icon"></span>
@@ -56,6 +60,20 @@
           <li class="nav-item <?php echo $currentPageUrl === 'pizza_list' ? 'active' : ''; ?>">
             <a class="nav-link" href="pizza_list.php">Liste des pizzas</a>
           </li>
+          <li class="nav-item <?php echo substr($currentPageUrl, 0, 12) === 'pizza_single' ? 'active' : 'd-none'; ?>">
+            <a class="nav-link" href="pizza_single.php">Ma pizza</a>
+          </li>
         </ul>
+
+        <!-- BACKOFFICE - Administrateur  d-none (caché) -->
+        <ul class="navbar-nav float-right">
+          <li class="nav-item <?php
+                                echo $currentPageUrl === 'adm_pizza_add' ? 'active ' : ' ';
+                                // echo $admin === false ? 'd-none ' : ' ';
+                              ?>">
+            <a class="nav-link" href="adm_pizza_add.php">Administration</a>
+          </li>
+        </ul>
+
       </div>
     </nav>

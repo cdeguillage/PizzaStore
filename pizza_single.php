@@ -1,4 +1,8 @@
 <?php
+
+    // Utilisateur
+    $admin = false;
+
     // Connection à la base de données
     require_once(__DIR__.'/config/database.php');
 
@@ -15,7 +19,7 @@
         if (!($pizza))
         {
             // Erreur 404
-            require_once(__DIR__.'/partials/404.php');
+            require_once(__DIR__.'/404.php');
         }
 
         // Title
