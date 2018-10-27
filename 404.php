@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-6">
                 <h1 class="page-title">404 - Page inexistante</h1>
-                <h2 class="page-stitle">Redirection dans 5 secondes...</h2>
+                <h2 class="stitle-redirection">Redirection dans 5 secondes...</h2>
             </div>
         </div>
     </main>

@@ -89,12 +89,6 @@ INSERT INTO `user` (`id`, `name`, `firstname`) VALUES
 
 -- --------------------------------------------------------
 
---
--- Structure de la vue `expansivepizza`
---
-DROP TABLE IF EXISTS `expansivepizza`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `expansivepizza`  AS  select `p`.`name` AS `pizza`,`s`.`name` AS `size`,`p`.`price` AS `price_pizza`,`s`.`price` AS `price_size`,(`p`.`price` + `s`.`price`) AS `price_final`,`p`.`image` AS `image` from ((`pizza_has_size` `phs` join `pizza` `p` on((`phs`.`pizza_id` = `p`.`id`))) join `size` `s` on((`phs`.`size_id` = `s`.`id`))) order by 5 desc ;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

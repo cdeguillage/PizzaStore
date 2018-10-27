@@ -41,21 +41,6 @@ CREATE TABLE `address` (
 -- --------------------------------------------------------
 
 --
--- Doublure de structure pour la vue `expansivepizza`
--- (Voir ci-dessous la vue réelle)
---
---CREATE TABLE `expansivepizza` (
---`pizza` varchar(45)
---,`size` varchar(45)
---,`price_pizza` decimal(11,2)
---,`price_size` decimal(11,2)
---,`price_final` decimal(12,2)
---,`image` varchar(255)
---);
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `order`
 --
 
@@ -91,7 +76,9 @@ CREATE TABLE `pizza` (
   `id` int(11) NOT NULL,
   `name` varchar(45) DEFAULT NULL,
   `price` decimal(11,2) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL
+  `image` varchar(255) DEFAULT NULL,
+  `category` varchar(45) DEFAULT NULL,
+  `description` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------

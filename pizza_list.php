@@ -28,15 +28,15 @@
             <?php
             foreach($pizzas as $pizza) { ?>
                 <div class="col-md-3">
-                    <div class="card mb-4">
+                    <div class="mb-4">
 
-                        <div class="card-img-top-container">
+                        <div class="card-img-top-container card-transparance">
                             <span class="card-price"><?= formatPrice($pizza['price']); ?></span>
                             <img class="card-img-top card-img-top-zoom-effect" src="<?php echo $pizza['image']; ?>" alt=<?php echo $pizza['name']; ?>>
                         </div>
                         
-                        <div class="card-body">
-                            <h3 class="card-title font-h3"><?php echo $pizza['name']; ?></h3>
+                        <div class="card-body bg-white card-round">
+                            <h3 class="card-title pizza-name"><?php echo $pizza['name']; ?></h3>
                             <a href="<?= 'pizza_single.php?id='.$pizza['id']; ?>" class="btn btn-danger">Commandez</a>
                         </div>
 

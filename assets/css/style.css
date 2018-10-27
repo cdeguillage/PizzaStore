@@ -12,7 +12,7 @@ body {
     padding-top: 15px;
     padding-left: 15px;
     padding-bottom: 2px solid #e8e8e8;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     color: #dc3545;
     border-radius: 0 50% 0 0;
     text-shadow: 2px 2px #000000;
@@ -30,7 +30,7 @@ body {
     text-shadow: 2px 2px #000000;
 }
 
-.page-stitle {
+.stitle-redirection {
     font-family: 'Alfa Slab One', cursive;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -42,7 +42,7 @@ body {
     text-shadow: 2px 2px #000000;
 }
 
-.font-h3 {
+.pizza-name {
     font-family: 'Homemade Apple', cursive;
     font-size: 1.5rem;
 }
@@ -51,9 +51,14 @@ img {
     z-index: 2015;
 }
 
-/* .card-img-top {
-    background-color: black;
-} */
+.card-transparance {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px 0 0 0;
+}
+
+.card-round {
+    border-radius: 0 0 20px 0;
+}
 
 .card-img-top-container {
     overflow: hidden;
@@ -67,6 +72,7 @@ img {
 .card-img-top-zoom-effect:hover {
     cursor: pointer;
     transform: scale(1.15);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .card-price {
@@ -96,25 +102,24 @@ img {
     font-size: 0.6rem;
 }
 
-
-/*
-.pastille {
-    position: absolute;
-    top: 15px;
-    bottom: 15px;
-    width: 90px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
-    font-family: 'Charmoman';
-    background-color: #dc3545;
-    border-radius: 10px;
-    color: #FFFFFF;
-}
-*/
-
 textarea[name=description] {
    resize: none;
+}
+
+
+/* Glyphicons */
+.mi-md-color {
+    color: #dc3545;
+}
+
+.mi-md-font-title {
+    font-size: 1.3rem;
+}
+
+.mi-md-font-contact {
+    font-size: 1rem;
+}
+
+.mi-md-font-color {
+    color: #dc3545;
 }
