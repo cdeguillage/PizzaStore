@@ -78,7 +78,8 @@ CREATE TABLE `pizza` (
   `price` decimal(11,2) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `category` varchar(45) DEFAULT NULL,
-  `description` varchar(45) DEFAULT NULL
+  `description` varchar(45) DEFAULT NULL,
+  `description` tinyint(4) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
