@@ -1,7 +1,7 @@
 <?php
 
     // Titre de la page / Utilisateur
-    $currentPageTitle = "Ajouter une pizza";
+    $currentPageTitle = "Gestion des utilisateurs";
 
     // Utilisateur
     $admin = true;

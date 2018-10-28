@@ -62,19 +62,30 @@
             <a class="nav-link" href="pizza_list.php">Liste des pizzas</a>
           </li>
           <li class="nav-item <?php echo substr($currentPageUrl, 0, 12) === 'pizza_single' ? 'active' : 'd-none'; ?>">
-            <a class="nav-link" href="pizza_single.php">Ma pizza</a>
+            <a class="nav-link" href="">Ma pizza</a>
           </li>
         </ul>
 
         <!-- BACKOFFICE - Administrateur  d-none (caché) -->
         <ul class="navbar-nav float-right">
-          <li class="nav-item <?php
-                                echo $currentPageUrl === 'adm_pizza_add' ? 'active ' : ' ';
-                                // echo $admin === false ? 'd-none ' : ' ';
-                              ?>">
-            <a class="nav-link" href="adm_pizza_add.php">Administration</a>
+          <li class="nav-item dropdown <?php
+                                          echo substr($currentPageUrl, 0, 4) === 'adm_' ? 'active ' : ' ';
+                                          // echo $admin === false ? 'd-none ' : ' ';
+                                        ?>">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Administration</a>
+            <div class="dropdown-menu  <?php
+                                          echo substr($currentPageUrl, 0, 4) === 'adm_' ? 'bg-success ' : 'bg-danger ';
+                                          // echo $admin === false ? 'd-none ' : ' ';
+                                        ?>">
+              <a class="dropdown-item" href="adm_pizza.php">Pizzas</a>
+              <a class="dropdown-item" href="adm_category.php">Catégories</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="adm_user.php">Utilisateur</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="adm_order.php">Commandes / Factures</a>
+            </div>
           </li>
-        </ul>
+                </ul>
 
       </div>
     </nav>

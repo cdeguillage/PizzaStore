@@ -9,7 +9,7 @@
     require_once(__DIR__.'/partials/header.php');
 
     // BDD : On va chercher la liste des pizzas
-    $query = $db->query('SELECT * FROM pizza ORDER BY id DESC');
+    $query = $db->query('SELECT * FROM pizza WHERE visible = 1 ORDER BY id DESC');
     $pizzas = $query->fetchAll();
 
     /*

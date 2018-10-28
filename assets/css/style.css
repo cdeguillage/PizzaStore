@@ -98,9 +98,10 @@ img {
     z-index: 2050;
 }
 
-.card-price-cents {
+/* .card-price-cents {
+    vertical-align: top;
     font-size: 0.6rem;
-}
+} */
 
 textarea[name=description] {
    resize: none;
