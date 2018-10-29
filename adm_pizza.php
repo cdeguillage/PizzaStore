@@ -19,7 +19,7 @@
     if (!empty($_POST)) {
         $name = $_POST['name'];
         $price = str_replace(',', '.', $_POST['price']); // on remplace la , par un . pour le prix
-        $image = $_FILES['image'];
+        $image = empty($_FILES['image']) ? 'no-logo.png' : $_FILES['image'];
         $category = $_POST['category'];
         $description = $_POST['description'];
 
@@ -81,7 +81,7 @@
             }
 
             // On vérifie la taille de l'image (en Ko)
-            if ($image['size'] / 1024 > 30)
+            if ($image['size'] / 1024 > 500)
             {
                 $errors['image'] = 'L\'image est trop lourde';
             }
@@ -152,7 +152,7 @@
                             } ?>
 
                             <label for="image">Image :</label>
-                            <input type="file" name="image" id="image" class="form-control <?php echo isset($errors['image']) ? 'is-invalid' : null; ?>" value="<?php echo empty($filename) ? '' : $filename; ?>">
+                            <input type="file" name="image" id="image" class="form-control" value="<?php echo empty($filename) ? '' : $filename; ?>">
                             <?php if (isset($errors['image'])) {
                                 echo '<div class="invalid-feedback">';
                                 echo $errors['image'];

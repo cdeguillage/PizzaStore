@@ -7,5 +7,3 @@ function formatPrice($price) {
     $cents = substr($price, -2);
     return $first."<sup>".$cents."</sup> €";
 }
-
-

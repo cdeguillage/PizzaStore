@@ -32,7 +32,7 @@
 
                         <div class="card-img-top-container card-transparance">
                             <span class="card-price"><?= formatPrice($pizza['price']); ?></span>
-                            <img class="card-img-top card-img-top-zoom-effect" src="<?php echo $pizza['image']; ?>" alt=<?php echo $pizza['name']; ?>>
+                            <img class="card-img-top card-img-top-zoom-effect" src="<?php echo $pizza['image'] === NULL ? 'assets/img/pizzas/no-logo.png' : $pizza['image']; ?>" alt=<?php echo $pizza['name']; ?>>
                         </div>
                         
                         <div class="card-body bg-white card-round">

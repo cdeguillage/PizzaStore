@@ -3,7 +3,7 @@
     // On crée une connexion à la BDD
     try
     {
-        $db = new PDO('mysql:host=localhost;port=3306;dbname=pizzastore;charset=utf8', 'pizza', '',
+        $db = new PDO('mysql:host=localhost;port=3306;dbname=pizzastore;charset=utf8', 'root', '',
                     [
                     // Activation de la gestion des messages d'erreur xdebug
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING,
@@ -17,7 +17,7 @@
     }
     catch(Exception $e)
     {
-        echo $e->getMessage();
+        echo $e->getMessage()."<br />";
         // header('Location: https://www.google.fr/search?q='.$e->getMessage());
         echo "<img src='assets/img/john-travolta.gif' alt='Where is my database ?!?'>";
 
